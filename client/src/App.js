@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Register from "./components/Register";
+import Homepage from "./components/Homepage";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/homepage" element={<Homepage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createpost" element={<AddPost />} />
           <Route path="/editpost" element={<EditPost />} />

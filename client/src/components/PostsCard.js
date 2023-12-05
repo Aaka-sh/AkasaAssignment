@@ -94,7 +94,9 @@ export default function PostsCard(props) {
     >
       <div className="card-body">
         <div className="title-div" style={{ alignItems: "center" }}>
-          <h5 className="card-title">{props.title}</h5>
+          <h5 className="card-title" style={{ color: "#574476" }}>
+            {props.title}
+          </h5>
         </div>
         <div
           style={{
@@ -134,7 +136,8 @@ export default function PostsCard(props) {
           >
             Dislike
           </button> */}
-          <FormControlLabel
+          {/* LIKE BUTTON CODE */}
+          {/* <FormControlLabel
             control={
               <Checkbox
                 icon={<FavoriteBorder />}
@@ -142,7 +145,7 @@ export default function PostsCard(props) {
                 name="checkedH"
               />
             }
-          />
+          /> */}
         </div>
       </div>
     </div>

@@ -42,13 +42,9 @@ export default function AddPost() {
       <GuideSideBar />
       <main id="main" className="main">
         <div className="pagetitle">
-          <h1>Create a Post</h1>
+          <h1 style={{ color: "#574476" }}>Create a Post</h1>
           <nav>
             <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <a href="index.html">Home</a>
-              </li>
-
               <li className="breadcrumb-item active">Create Blog Post</li>
             </ol>
           </nav>
@@ -128,9 +124,9 @@ export default function AddPost() {
                     <div className="text-center">
                       <button
                         type="submit"
-                        className="btn col-md-8 mt-4"
+                        className="btn col-md-4 mt-4"
                         style={{
-                          backgroundColor: "#012971",
+                          backgroundColor: "#574476",
                           color: "white",
                         }}
                         onClick={(e) => {

@@ -38,7 +38,7 @@ export default function Register() {
                       className="logo d-flex align-items-center w-auto"
                     >
                       <img src="assets/img/logo.png" alt="" />
-                      <span className="d-none d-lg-block">BlogsSpot</span>
+                      <span className="d-none d-lg-block">BlogVista</span>
                     </a>
                   </div>
                   {/* End Logo */}

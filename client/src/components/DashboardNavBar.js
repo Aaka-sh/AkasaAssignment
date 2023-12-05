@@ -61,33 +61,18 @@ export default function DashboardNavBar() {
       <header
         id="header"
         className="header fixed-top d-flex align-items-center"
+        style={{ backgroundColor: "#574476" }}
       >
         <div className="d-flex align-items-center justify-content-between">
-          <a href="/" className="logo d-flex align-items-center">
+          <a href="/dashboard" className="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="" />
-            <span className="d-none d-lg-block">BlogsSpot</span>
+            <span className="d-none d-lg-block" style={{ color: "#ffffff" }}>
+              BlogVista
+            </span>
           </a>
-          <i className="bi bi-list toggle-sidebar-btn" />
         </div>
         {/* End Logo */}
-        <div className="search-bar">
-          <form
-            className="search-form d-flex align-items-center"
-            method="POST"
-            action="#"
-          >
-            <input
-              type="text"
-              name="query"
-              placeholder="Search"
-              title="Enter search keyword"
-            />
-            <button type="submit" title="Search">
-              <i className="bi bi-search" />
-            </button>
-          </form>
-        </div>
-        {/* End Search Bar */}
+
         <nav className="header-nav ms-auto">
           <ul className="d-flex align-items-center">
             <li className="nav-item dropdown pe-3">
@@ -95,6 +80,7 @@ export default function DashboardNavBar() {
                 className="nav-link nav-profile d-flex align-items-center pe-0"
                 href="#"
                 data-bs-toggle="dropdown"
+                style={{ color: "#ffffff" }}
               >
                 Options
               </a>

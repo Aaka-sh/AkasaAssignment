@@ -1,6 +1,10 @@
 import React from "react";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import Favorite from "@material-ui/icons/Favorite";
+import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import { createClient } from "@supabase/supabase-js";
-export default function TeamCards(props) {
+export default function AllPosts(props) {
   const supabase = createClient(
     "https://qydqfffifmazzfuibxst.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5ZHFmZmZpZm1henpmdWlieHN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3MDc3MTAsImV4cCI6MjAxNzI4MzcxMH0.vnfTpK1szQnvobJbBmi_7Y80yvnDTogKVsm5JW3jZCM"
@@ -29,35 +33,15 @@ export default function TeamCards(props) {
         >
           {props.project_description}
         </div>
-        <div className="text-center">
-          <a
-            href="/editpost"
-            className="btn w-100 mt-3"
-            style={{ backgroundColor: "#574476", color: "white" }}
-            onClick={() => {
-              sessionStorage.setItem("blogid", props.id);
-            }}
-          >
-            Edit Post
-          </a>
-        </div>
-        <button
-          className="btn w-100 mt-3"
-          type="button"
-          style={{
-            backgroundColor: "#574476",
-            color: "white",
-          }}
-          onClick={async () => {
-            const { error } = await supabase
-              .from("blogposts")
-              .delete()
-              .eq("id", props.id);
-            window.location.reload(true);
-          }}
-        >
-          Delete
-        </button>
+        <FormControlLabel
+          control={
+            <Checkbox
+              icon={<FavoriteBorder />}
+              checkedIcon={<Favorite />}
+              name="checkedH"
+            />
+          }
+        />
       </div>
     </div>
   );

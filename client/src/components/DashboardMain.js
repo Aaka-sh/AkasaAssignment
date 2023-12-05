@@ -35,7 +35,7 @@ export default function DashboardMain() {
     <div>
       <main id="main" className="main">
         <div className="pagetitle">
-          <h1>My Posts</h1>
+          <h1 style={{ color: "#574476" }}>My Posts</h1>
           <nav>
             <ol className="breadcrumb">
               <li className="breadcrumb-item">View Posts</li>

@@ -4,6 +4,7 @@ export default function Navbar() {
     <header
       id="header"
       className="header fixed-top d-flex align-items-center mx-auto"
+      style={{ backgroundColor: "#574476" }}
     >
       <div
         className="d-flex align-items-center justify-content-between"
@@ -11,7 +12,9 @@ export default function Navbar() {
       >
         <a href="/" className="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="" />
-          <span className="d-none d-lg-block">BlogsSpot</span>
+          <span className="d-none d-lg-block" style={{ color: "#ffffff" }}>
+            BlogVista
+          </span>
         </a>
       </div>
       {/* End Logo */}
@@ -19,12 +22,20 @@ export default function Navbar() {
         {sessionStorage.getItem("email") === null && (
           <ul>
             <li>
-              <a className="nav-link scrollto" href="/login">
+              <a
+                className="nav-link scrollto"
+                href="/login"
+                style={{ color: "#ffffff" }}
+              >
                 Login
               </a>
             </li>
             <li>
-              <a className="getstarted scrollto" href="/register">
+              <a
+                className="getstarted scrollto"
+                href="/register"
+                style={{ color: "#ffffff" }}
+              >
                 Register
               </a>
             </li>

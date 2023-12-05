@@ -56,8 +56,10 @@ export default function HomeMain() {
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
           <div className="row">
-            <h1>Become a Blogger Today!</h1>
-            <h2>Express yourself to the world!</h2>
+            <h1>Unleash Ideas, One Post at a Time</h1>
+            <h2>
+              Explore, Engage, Evolve: Your Window to Endless Perspectives!
+            </h2>
           </div>
         </div>
       </section>
@@ -90,6 +92,7 @@ export default function HomeMain() {
                   display: "flex",
                   flexDirection: "row",
                   alignItems: "center",
+
                   margin: "30px",
                 }}
               >
@@ -97,7 +100,7 @@ export default function HomeMain() {
                   id="input-with-icon-adornment"
                   className="searchBar"
                   style={{ width: "400px", marginRight: "20px" }}
-                  defaultValue="Search by Keyword..."
+                  placeholder="Search by Keyword..."
                   onChange={(e) => {
                     setKeyword(e.target.value);
                   }}
@@ -110,13 +113,17 @@ export default function HomeMain() {
                   }
                 />
 
-                <Button
-                  variant="contained"
-                  id="searchbtn"
+                <button
+                  type="submit"
+                  className="btn col-md-2 mt-4"
+                  style={{
+                    backgroundColor: "#574476",
+                    color: "white",
+                  }}
                   onClick={() => fetchdata()}
                 >
                   Search
-                </Button>
+                </button>
               </div>
             </div>
 
