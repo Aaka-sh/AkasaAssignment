@@ -57,13 +57,9 @@ export default function EditPost(props) {
       <GuideSideBar />
       <main id="main" className="main">
         <div className="pagetitle">
-          <h1>Edit Post</h1>
+          <h1 style={{ color: "#574476" }}>Edit Post</h1>
           <nav>
             <ol className="breadcrumb">
-              <li className="breadcrumb-item">
-                <a href="index.html">Home</a>
-              </li>
-
               <li className="breadcrumb-item active">Edit Blog Post</li>
             </ol>
           </nav>
@@ -145,7 +141,7 @@ export default function EditPost(props) {
                         type="submit"
                         className="btn col-md-8 mt-4"
                         style={{
-                          backgroundColor: "#012971",
+                          backgroundColor: "#574476",
                           color: "white",
                         }}
                         onClick={(e) => {
