@@ -110,12 +110,12 @@ export default function PostsCard(props) {
           }}
         >
           <p className="card-text">
-            <b> Keyword: </b> {props.keyword}
-            <br />
-            <br />
             {props.project_description}
+            <br />
+            <br />
           </p>
         </div>
+        <b> Keyword: </b> {props.keyword}
         <div
           style={{
             display: "flex",

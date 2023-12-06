@@ -8,7 +8,10 @@ export default function DashboardSideBar() {
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <a className="nav-link" href="/homepage">
-              <i style={{ color: "#574476" }} className="bi bi-person-add" />
+              <i
+                style={{ color: "#574476" }}
+                className="bi bi-house-door-fill"
+              />
               <span style={{ color: "#574476" }}>Homepage</span>
             </a>
           </li>
@@ -22,7 +25,10 @@ export default function DashboardSideBar() {
 
           <li className="nav-item">
             <a className="nav-link collapsed" href="/createpost">
-              <i style={{ color: "#574476" }} className="bi bi-person-add" />
+              <i
+                style={{ color: "#574476" }}
+                className="bi bi-plus-square-fill"
+              />
               <span style={{ color: "#574476" }}>Create Post</span>
             </a>
           </li>

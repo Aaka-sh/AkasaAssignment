@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import Navbar from "./Navbar";
+import Swal from "sweetalert2";
 import { createClient } from "@supabase/supabase-js";
 
 import { useNavigate } from "react-router-dom";
@@ -19,9 +20,18 @@ export default function Register() {
 
   const register = async () => {
     console.log(usernameReg, passwordReg);
-    const { data, error } = await supabase
-      .from("Users")
-      .insert([{ email: usernameReg, password: passwordReg }]);
+    if (usernameReg !== "" && passwordReg !== "") {
+      const { data, error } = await supabase
+        .from("Users")
+        .insert([{ email: usernameReg, password: passwordReg }]);
+    } else {
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Please fill in the details!",
+        showConfirmButton: true,
+      });
+    }
   };
   return (
     <div>
@@ -38,14 +48,22 @@ export default function Register() {
                       className="logo d-flex align-items-center w-auto"
                     >
                       <img src="assets/img/logo.png" alt="" />
-                      <span className="d-none d-lg-block">BlogVista</span>
+                      <span
+                        className="d-none d-lg-block"
+                        style={{ color: "#574476" }}
+                      >
+                        BlogVista
+                      </span>
                     </a>
                   </div>
                   {/* End Logo */}
                   <div className="card mb-3">
                     <div className="card-body">
                       <div className="pt-4 pb-2">
-                        <h5 className="card-title text-center pb-0 fs-4">
+                        <h5
+                          className="card-title text-center pb-0 fs-4"
+                          style={{ color: "#574476" }}
+                        >
                           Create an Account
                         </h5>
                         <p className="text-center small">
@@ -93,8 +111,9 @@ export default function Register() {
                             className="btn btn-primary w-100"
                             type="submit"
                             style={{
-                              backgroundColor: "#012970",
+                              backgroundColor: "#574476",
                               color: "white",
+                              border: "none",
                             }}
                             onClick={() => {
                               register();
@@ -106,7 +125,10 @@ export default function Register() {
                         </div>
                         <div className="col-12">
                           <p className="small mb-0">
-                            Already have an account? <a href="/Login">Log in</a>
+                            Already have an account?{" "}
+                            <a href="/Login" style={{ color: "#574476" }}>
+                              Log in
+                            </a>
                           </p>
                         </div>
                       </form>

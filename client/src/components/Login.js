@@ -3,6 +3,8 @@ import Axios from "axios";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import { createClient } from "@supabase/supabase-js";
+import Swal from "sweetalert2";
+
 export default function Login() {
   let navigate = useNavigate();
   const supabase = createClient(
@@ -15,10 +17,17 @@ export default function Login() {
     const { data, error } = await supabase
       .from("Users")
       .select("email, password")
-      .eq("email", username);
+      .eq("email", username)
+      .eq("password", password);
     console.log(data);
     if (data.length === 0) {
-      console.log("Invalid email or password");
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "Invalid Email/Password! Try again!",
+        showConfirmButton: true,
+        timer: 1500,
+      });
     } else {
       localStorage.setItem("email", true);
       sessionStorage.setItem("email", username);

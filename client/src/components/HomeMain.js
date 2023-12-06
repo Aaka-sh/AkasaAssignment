@@ -52,7 +52,7 @@ export default function HomeMain() {
   }, []);
 
   return (
-    <div>
+    <div style={{ fontFamily: "Poppins, sans-serif" }}>
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -60,6 +60,18 @@ export default function HomeMain() {
             <h2>
               Explore, Engage, Evolve: Your Window to Endless Perspectives!
             </h2>
+            <button
+              type="submit"
+              className="btn col-md-2"
+              style={{
+                backgroundColor: "#574476",
+                color: "white",
+              }}
+            >
+              <a href="#postsection" style={{ color: "white" }}>
+                View Posts
+              </a>
+            </button>
           </div>
         </div>
       </section>
